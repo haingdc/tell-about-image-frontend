@@ -1,0 +1,32 @@
+{
+  
+  "tasks": {
+    "types": {
+      "description": "giải quyết lỗi Deno is not found",
+      "command": "deno types > lib.deno.d.ts"
+    },
+    "standalone:copy": "cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/",
+    "standalone:rename": {
+      "description": "Kiểm tra nếu file server.js tồn tại thì đổi tên, nếu không thì bỏ qua với || true ở cuối lệnh nhằm đảm bảo task vẫn thực thi thành công",
+      "command": "test -f .next/standalone/server.js && mv .next/standalone/server.js .next/standalone/server.cjs || true"
+    },
+    "standalone:start": {
+      "command": "deno run --allow-all .next/standalone/server.cjs",
+      "dependencies": ["standalone:copy", "standalone:rename"]
+    }
+  },
+  "unstable": ["unsafe-proto"],
+  "nodeModulesDir": "auto",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": [
+      "dom", "dom.iterable", "esnext", "deno.ns"
+    ]
+  },
+  "imports": {
+    "@/": "./"
+  },
+  "lint": {
+    "exclude": ["lib.deno.d.ts"]
+  }
+}

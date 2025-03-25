@@ -1,42 +1,320 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer reset, default, components, utilities;
+
+@layer reset {
+  /* reference: https://www.joshwcomeau.com/css/custom-css-reset/ */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  #root,
+  #__next {
+    isolation: isolate;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@layer default {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #ededed;
+    }
+  }
+
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html {
+      color-scheme: dark;
+    }
+  }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@layer utilities {
+  .container-xxxs {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .container-xxs {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .container-xs {
+    max-width: 532px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .container-s {
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+  .web-typo-bold {
+    font-weight: 700;
+  }
+  .web-typo-uppercase {
+    text-transform: uppercase;
+  }
+  .web-typo-center {
+    text-align: center;
+  }
+  .web-typo-regular-1 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 133%;
+  }
+  .web-typo-regular-2 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 136%;
+  }
+  .web-typo-regular-3 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+  .web-typo-regular-4 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 133%;
+  }
+  .web-typo-regular-5 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 137%;
+  }
+  .web-typo-regular-6 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 143%;
+  }
+  .web-typo-regular-7 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 133%;
+  }
+  .web-typo-regular-narrow-1 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 114%;
+  }
+  .web-typo-regular-narrow-2 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 114%;
+  }
+  .web-typo-regular-narrow-3 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 114%;
+  }
+  .web-typo-regular-narrow-4 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 114%;
+  }
+  .web-typo-regular-narrow-5 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 114%;
+  }
+  .web-typo-regular-narrow-6 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 114%;
+  }
+  .web-typo-regular-narrow-7 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 114%;
+  }
+  .web-typo-bold-1 {
+    font-size: 24px;
+    line-height: 133%;
+    font-weight: 700;
+  }
+  .web-typo-bold-2 {
+    font-size: 22px;
+    line-height: 136%;
+    font-weight: 700;
+  }
+  .web-typo-bold-3 {
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 700;
+  }
+  .web-typo-bold-4 {
+    font-size: 18px;
+    line-height: 133%;
+    font-weight: 700;
+  }
+  .web-typo-bold-5 {
+    font-size: 16px;
+    line-height: 137%;
+    font-weight: 700;
+  }
+  .web-typo-bold-6 {
+    font-size: 14px;
+    line-height: 143%;
+    font-weight: 700;
+  }
+  .web-typo-bold-7 {
+    font-size: 12px;
+    line-height: 133%;
+    font-weight: 700;
+  }
+  .web-typo-heading-bold-1 {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 114%;
+    margin-bottom: 0;
+  }
+  .web-typo-heading-bold-2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 117%;
+    margin-bottom: 0;
+  }
+  .web-typo-heading-bold-3 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 122%;
+    margin-bottom: 0;
+  }
+  .web-typo-heading-bold-4 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 122%;
+    margin-bottom: 0;
+  }
+  .web-typo-heading-bold-5 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 125%;
+    margin-bottom: 0;
+  }
+  .web-typo-heading-bold-6 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 129%;
+    margin-bottom: 0;
+  }
+  .web-typo-heading-1 {
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 114%;
+    margin-bottom: 0;
+  }
+  .web-typo-heading-2 {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 117%;
+  }
+  .web-typo-heading-3 {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 122%;
+  }
+  .web-typo-heading-4 {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 129%;
+  }
+  .web-typo-heading-5 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 125%;
+  }
+  .web-typo-heading-6 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 129%;
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  /* image cover */
+  .web-image-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .web-image-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
