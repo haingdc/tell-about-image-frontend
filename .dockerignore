@@ -1,1 +1,3 @@
-fly.toml
+.git
+.next
+node_modules

@@ -1,5 +1,9 @@
-# Tên ứng dụng trên Fly.io
-app = "tell-about-image-frontend"
+# fly.toml app configuration file generated for tell-about-image-frontend on 2025-03-28T06:39:16+07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'tell-about-image-frontend'
 primary_region = 'sin'
 
 [build]
