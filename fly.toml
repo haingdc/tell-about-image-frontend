@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for tell-about-image-frontend on 2025-03-28T06:39:16+07:00
+# fly.toml app configuration file generated for frontend-wispy-paper-6811 on 2025-03-28T07:01:43+07:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'tell-about-image-frontend'
+app = 'frontend-wispy-paper-6811'
 primary_region = 'sin'
 
 [build]
