@@ -35,6 +35,7 @@ export default function ImageLayout({
           Describe
         </button>
       </div>
+      <div className="separator" />
       {children}
     </div>
   );

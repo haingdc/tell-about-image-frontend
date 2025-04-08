@@ -1,0 +1,49 @@
+@layer components {
+  .upload-component {
+    width: 100%;
+    max-width: 500px;
+    min-height: 300px;
+    border: 2px dashed #d1d5db;
+    border-radius: var(--radius-3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--size-px-3);
+    padding: var(--size-px-7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      border-color: var(--blue-7);
+      background-color: var(--blue-0);
+    }
+
+    .image-wrapper {
+      width: 200px;
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    .extensions {
+      display: flex;
+      gap: var(--size-px-2);
+    }
+
+    .extension_item {
+      background-color: var(--gray-2);
+      padding: var(--size-px-1);
+      border: 1px solid var(--gray-4);
+      border-radius: var(--radius-2);
+    }
+
+    .upload-texts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--size-px-3);
+    }
+  }
+}

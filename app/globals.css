@@ -1,10 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import url("../public/fontello-a37998fd/css/fontello.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('../public/fontello-a37998fd/css/fontello.css');
+@import url('@/app/layers-define.css');
+@import 'open-props/normalize' layer(reset);
+@import 'open-props/colors' layer(base);
+@import 'open-props/sizes' layer(base);
+@import 'open-props/borders' layer(base);
 
-@layer reset, default, base, components, utilities;
-
-@layer reset {
-  /* reference: https://www.joshwcomeau.com/css/custom-css-reset/ */
+/* reference: https://www.joshwcomeau.com/css/custom-css-reset/ */
+/* @layer reset {
   *,
   *::before,
   *::after {
@@ -62,7 +65,7 @@
   #__next {
     isolation: isolate;
   }
-}
+} */
 
 @layer default {
   :root {
@@ -77,11 +80,11 @@
     }
   }
 
-  html,
+  /* html,
   body {
     max-width: 100vw;
     overflow-x: hidden;
-  }
+  } */
 
   body {
     color: var(--foreground);
@@ -89,17 +92,6 @@
     font-family: Nunito, Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    html {
-      color-scheme: dark;
-    }
   }
 }
 
@@ -317,5 +309,25 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+}
+
+@layer components {
+  .section-separator {
+    display: flex;
+    gap: 1rem;
+    &:before {
+      content: '';
+      border: 0.5px dashed #d3d3d3;
+      align-self: stretch;
+    }
+    .section__item--start {
+      order: -1;
+    }
+  }
+  .separator {
+    width: 1px;
+    background-color: #d3d3d3;
+    height: 100%;
   }
 }
