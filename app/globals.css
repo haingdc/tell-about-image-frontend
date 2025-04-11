@@ -5,6 +5,8 @@
 @import 'open-props/colors' layer(base);
 @import 'open-props/sizes' layer(base);
 @import 'open-props/borders' layer(base);
+@import 'open-props/aspects' layer(base);
+@import 'open-props/fonts' layer(base);
 
 /* reference: https://www.joshwcomeau.com/css/custom-css-reset/ */
 /* @layer reset {

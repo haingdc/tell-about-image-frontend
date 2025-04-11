@@ -1,0 +1,7 @@
+@layer components {
+  .upload-form-component {
+    container-type: inline-size;
+    container-name: upload-form;
+    width: 100%;
+  }
+}

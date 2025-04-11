@@ -29,6 +29,14 @@ export default function ImageLayout({
         <button
           type="button"
           className={styles.modeButton}
+          data-active={pathname === "/image/base64-revamp"}
+          onClick={() => handleNavigate("/image/base64-revamp")}
+        >
+          Base64 Revamp
+        </button>
+        <button
+          type="button"
+          className={styles.modeButton}
           data-active={pathname === "/image/describe"}
           onClick={() => handleNavigate("/image/describe")}
         >

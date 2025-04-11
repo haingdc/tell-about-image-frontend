@@ -8,8 +8,14 @@ export default function UploadComponent(
     selectedFile: File | null;
   },
 ) {
+  const handleClick = () => {
+    if (ref && "current" in ref && ref.current) {
+      ref.current.click();
+    }
+  };
+
   return (
-    <div className="upload-component">
+    <div className="upload-component" onClick={handleClick}>
       <div className="image-wrapper">
         <img
           src="/static/icons/desert.svg"
@@ -29,10 +35,10 @@ export default function UploadComponent(
         ? <div>Selected: {selectedFile.name}</div>
         : (
           <div className="upload-texts web-typo-center">
-            <div className="web-typo-bold-2">
+            <div className="text--primary">
               Click to upload or drag and drop
             </div>
-            <div className="web-typo-regular-narrow-3">Supported files</div>
+            <div className="text--secondary">Supported files</div>
             <div className="extensions">
               <div className="extension_item">PNG</div>
               <div className="extension_item">JPG</div>

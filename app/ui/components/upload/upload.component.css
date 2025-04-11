@@ -2,7 +2,6 @@
   .upload-component {
     width: 100%;
     max-width: 500px;
-    min-height: 300px;
     border: 2px dashed #d1d5db;
     border-radius: var(--radius-3);
     display: flex;
@@ -10,7 +9,7 @@
     align-items: center;
     justify-content: center;
     gap: var(--size-px-3);
-    padding: var(--size-px-7);
+    padding: var(--size-px-3);
     cursor: pointer;
     transition: all 0.3s ease;
     &:hover {
@@ -19,7 +18,7 @@
     }
 
     .image-wrapper {
-      width: 200px;
+      width: 80px;
       img {
         width: 100%;
         height: auto;
@@ -37,13 +36,52 @@
       padding: var(--size-px-1);
       border: 1px solid var(--gray-4);
       border-radius: var(--radius-2);
+      font-size: var(--font-size-00);
+      line-height: var(--font-lineheight-00);
     }
 
     .upload-texts {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: var(--size-px-3);
+      gap: var(--size-px-2);
+    }
+
+    .text--primary {
+      font-size: var(--font-size-1);
+      line-height: var(--font-lineheight-1);
+      font-weight: var(--font-weight-7);
+    }
+    .text--secondary {
+      font-size: var(--font-size-0);
+      line-height: var(--font-lineheight-0);
+    }
+  }
+  @container (min-width: 400px) {
+    .upload-component {
+      padding: var(--size-px-7);
+      .image-wrapper {
+        width: 200px;
+      }
+      .text--primary {
+        font-size: var(--font-size-3);
+      }
+      .text--secondary {
+        /* font-size: 20px;
+        font-weight: 400;
+        line-height: 114%; */
+        font-size: var(--font-size-2);
+        line-height: var(--font-lineheight-0);
+      }
+      .upload-texts {
+        gap: var(--size-px-3);
+      }
+
+      .extension_item {
+        padding: var(--size-px-2);
+        font-size: var(--font-size-0);
+        line-height: var(--font-lineheight-00);
+      }
     }
   }
 }

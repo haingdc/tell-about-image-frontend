@@ -1,22 +1,54 @@
 {
   "version": "4",
   "specifiers": {
+    "npm:@csstools/postcss-global-data@3": "3.0.0_postcss@8.4.31",
     "npm:@eslint/eslintrc@3": "3.3.0",
     "npm:@types/node@*": "22.12.0",
     "npm:@types/node@^22.13.14": "22.13.14",
     "npm:@types/react-dom@19": "19.0.4_@types+react@19.0.12",
     "npm:@types/react@19": "19.0.12",
     "npm:clsx@^2.1.1": "2.1.1",
+    "npm:create-storybook@latest": "8.6.12",
     "npm:eslint-config-next@15.2.1": "15.2.1_eslint@9.22.0_typescript@5.8.2_@typescript-eslint+parser@8.27.0__eslint@9.22.0__typescript@5.8.2_eslint-plugin-import@2.31.0__eslint@9.22.0",
     "npm:eslint@9": "9.22.0",
     "npm:next@15.2.4": "15.2.4_react@19.0.0_react-dom@19.0.0__react@19.0.0",
     "npm:open-props@^1.7.14": "1.7.14",
+    "npm:postcss-custom-media@^11.0.5": "11.0.5_postcss@8.4.31_@csstools+css-parser-algorithms@3.0.4__@csstools+css-tokenizer@3.0.3_@csstools+css-tokenizer@3.0.3",
     "npm:react-dom@19": "19.0.0_react@19.0.0",
     "npm:react@19": "19.0.0",
     "npm:sharp@0.34": "0.34.0",
     "npm:typescript@5": "5.8.2"
   },
   "npm": {
+    "@csstools/cascade-layer-name-parser@2.0.4_@csstools+css-parser-algorithms@3.0.4__@csstools+css-tokenizer@3.0.3_@csstools+css-tokenizer@3.0.3": {
+      "integrity": "sha512-7DFHlPuIxviKYZrOiwVU/PiHLm3lLUR23OMuEEtfEOQTOp9hzQ2JjdY6X5H18RVuUPJqSCI+qNnD5iOLMVE0bA==",
+      "dependencies": [
+        "@csstools/css-parser-algorithms",
+        "@csstools/css-tokenizer"
+      ]
+    },
+    "@csstools/css-parser-algorithms@3.0.4_@csstools+css-tokenizer@3.0.3": {
+      "integrity": "sha512-Up7rBoV77rv29d3uKHUIVubz1BTcgyUK72IvCQAbfbMv584xHcGKCKbWh7i8hPrRJ7qU4Y8IO3IY9m+iTB7P3A==",
+      "dependencies": [
+        "@csstools/css-tokenizer"
+      ]
+    },
+    "@csstools/css-tokenizer@3.0.3": {
+      "integrity": "sha512-UJnjoFsmxfKUdNYdWgOB0mWUypuLvAfQPH1+pyvRJs6euowbFkFC6P13w1l8mJyi3vxYMxc9kld5jZEGRQs6bw=="
+    },
+    "@csstools/media-query-list-parser@4.0.2_@csstools+css-parser-algorithms@3.0.4__@csstools+css-tokenizer@3.0.3_@csstools+css-tokenizer@3.0.3": {
+      "integrity": "sha512-EUos465uvVvMJehckATTlNqGj4UJWkTmdWuDMjqvSUkjGpmOyFZBVwb4knxCm/k2GMTXY+c/5RkdndzFYWeX5A==",
+      "dependencies": [
+        "@csstools/css-parser-algorithms",
+        "@csstools/css-tokenizer"
+      ]
+    },
+    "@csstools/postcss-global-data@3.0.0_postcss@8.4.31": {
+      "integrity": "sha512-3dR5+RDhPW1uqPWZUyTBSVn03gGbxzoSyCEpXugy9UMtXeyKjrB84dX3V8eggzooCsX8wcraKehzdouNO+MlsA==",
+      "dependencies": [
+        "postcss"
+      ]
+    },
     "@emnapi/core@1.3.1": {
       "integrity": "sha512-pVGjBIt1Y6gg3EJN8jTcfpP/+uuRksIo055oE/OBkDNcjZqVbfkWCksG1Jp4yZnj3iKWyWX8fdG/j6UDYPbFog==",
       "dependencies": [
@@ -633,6 +665,12 @@
     "ast-types-flow@0.0.8": {
       "integrity": "sha512-OH/2E5Fg20h2aPrbe+QL8JZQFko0YZaF+j4mnQ7BGhfavO7OpSLa8a0y9sBwomHdSbkhTS8TQNayBfnW5DwbvQ=="
     },
+    "ast-types@0.16.1": {
+      "integrity": "sha512-6t10qk83GOG8p0vKmaCr8eiilZwO171AvbROMtvvNiwrTly62t+7XkA8RdIIVbpMhCASAsxgAzdRSwh6nw/5Dg==",
+      "dependencies": [
+        "tslib"
+      ]
+    },
     "async-function@1.0.0": {
       "integrity": "sha512-hsU18Ae8CDTR6Kgu9DYf0EbCr/a5iGL0rytQDobUcdpYOKokk8LEjVphnXkDkgpi0wYVsqrXuP0bZxJaTqdgoA=="
     },
@@ -743,6 +781,13 @@
     },
     "concat-map@0.0.1": {
       "integrity": "sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg=="
+    },
+    "create-storybook@8.6.12": {
+      "integrity": "sha512-2Yb2LuWNvOEATWjj/pDAfkGhGiTLdV1nqJZLjB6F08ItcyBSeGuFybimrac72zFq4u0GI8LkjzEg/J3B1NI4tA==",
+      "dependencies": [
+        "recast",
+        "semver@7.7.1"
+      ]
     },
     "cross-spawn@7.0.6": {
       "integrity": "sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==",
@@ -1129,6 +1174,9 @@
         "acorn-jsx",
         "eslint-visitor-keys@4.2.0"
       ]
+    },
+    "esprima@4.0.1": {
+      "integrity": "sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A=="
     },
     "esquery@1.6.0": {
       "integrity": "sha512-ca9pw9fomFcKPvFLXhBKUK90ZvGibiGOvRJNbjljY7s7uq/5YO4BOzcYtJqExdx99rF6aAcnRxHmcUHcz6sQsg==",
@@ -1778,6 +1826,16 @@
     "possible-typed-array-names@1.1.0": {
       "integrity": "sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg=="
     },
+    "postcss-custom-media@11.0.5_postcss@8.4.31_@csstools+css-parser-algorithms@3.0.4__@csstools+css-tokenizer@3.0.3_@csstools+css-tokenizer@3.0.3": {
+      "integrity": "sha512-SQHhayVNgDvSAdX9NQ/ygcDQGEY+aSF4b/96z7QUX6mqL5yl/JgG/DywcF6fW9XbnCRE+aVYk+9/nqGuzOPWeQ==",
+      "dependencies": [
+        "@csstools/cascade-layer-name-parser",
+        "@csstools/css-parser-algorithms",
+        "@csstools/css-tokenizer",
+        "@csstools/media-query-list-parser",
+        "postcss"
+      ]
+    },
     "postcss@8.4.31": {
       "integrity": "sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==",
       "dependencies": [
@@ -1815,6 +1873,16 @@
     },
     "react@19.0.0": {
       "integrity": "sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ=="
+    },
+    "recast@0.23.11": {
+      "integrity": "sha512-YTUo+Flmw4ZXiWfQKGcwwc11KnoRAYgzAE2E7mXKCjSviTKShtxBsN6YUUBB2gtaBzKzeKunxhUwNHQuRryhWA==",
+      "dependencies": [
+        "ast-types",
+        "esprima",
+        "source-map",
+        "tiny-invariant",
+        "tslib"
+      ]
     },
     "reflect.getprototypeof@1.0.10": {
       "integrity": "sha512-00o4I+DVrefhv+nX0ulyi3biSHCPDe+yLv5o/p6d/UVlirijB8E16FtfwSAi4g3tcqrQ4lRAqQSoFEZJehYEcw==",
@@ -2058,6 +2126,9 @@
     "source-map-js@1.2.1": {
       "integrity": "sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA=="
     },
+    "source-map@0.6.1": {
+      "integrity": "sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g=="
+    },
     "stable-hash@0.0.5": {
       "integrity": "sha512-+L3ccpzibovGXFK+Ap/f8LOS0ahMrHTf3xu7mMLSpEGU0EO9ucaysSylKo9eRDFNhWve/y275iPmIZ4z39a9iA=="
     },
@@ -2147,6 +2218,9 @@
     },
     "supports-preserve-symlinks-flag@1.0.0": {
       "integrity": "sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w=="
+    },
+    "tiny-invariant@1.3.3": {
+      "integrity": "sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg=="
     },
     "tinyglobby@0.2.12_picomatch@4.0.2": {
       "integrity": "sha512-qkf4trmKSIiMTs/E63cxH+ojC2unam7rJ0WrauAzpT3ECNTxGRMlaXxVbfxMUC/w0LaYk6jQ4y/nGR9uBO3tww==",
@@ -2312,6 +2386,7 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
+        "npm:@csstools/postcss-global-data@3",
         "npm:@eslint/eslintrc@3",
         "npm:@types/node@^22.13.14",
         "npm:@types/react-dom@19",
@@ -2321,6 +2396,7 @@
         "npm:eslint@9",
         "npm:next@15.2.4",
         "npm:open-props@^1.7.14",
+        "npm:postcss-custom-media@^11.0.5",
         "npm:react-dom@19",
         "npm:react@19",
         "npm:sharp@0.34",

@@ -53,7 +53,7 @@
     background-color: #f3f4f6;
   }
 
-  .modeButton[data-active="true"] {
+  .modeButton[data-active='true'] {
     background-color: #3b82f6;
     color: white;
     border-color: #2563eb;
@@ -64,9 +64,7 @@
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-    padding: 2rem;
     border-radius: 12px;
-    /* background-color: #f9fafb; */
   }
 
   .uploadArea {
@@ -164,7 +162,7 @@
         opacity: 0;
         transition: opacity 0.3s;
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           top: 100%;
           left: 50%;
