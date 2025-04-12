@@ -10,6 +10,7 @@ COPY . .
 # Stage 1: Install dependencies
 RUN deno install
 RUN deno install --allow-scripts=npm:sharp@0.34.0
+RUN deno install --allow-scripts=npm:core-js-pure@3.41.0
 
 # Stage 2: Build the application
 # Run tasks to set up the environment and application
