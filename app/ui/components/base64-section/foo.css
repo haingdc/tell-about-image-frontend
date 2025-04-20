@@ -1,0 +1,104 @@
+@layer components {
+  .tabs {
+    --tab-bg-color: white;
+    --tabs-height: var(--size-px-10);
+    --tabs-selected-bg-color: white;
+    --tabs-hover-bg-color: white;
+    --tab-content-bg-color: white;
+    min-width: 300px;
+    min-height: 100px;
+    width: 100%;
+    border: var(--border-size-1) solid var(--gray-1);
+    background-color: var(--gray-2);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .tab-content {
+      min-height: 100px;
+      background-color: var(--tab-content-bg-color);
+    }
+
+    .tab-item {
+      max-width: 150px;
+
+      &:first-of-type {
+        margin-left: var(--size-px-2);
+      }
+
+      >.tab-radio {
+        position: absolute;
+        opacity: 0;
+      }
+
+      >.tab-label {
+        background-color: var(--tab-bg-color);
+        display: flex;
+        padding: var(--size-px-3);
+        align-items: center;
+        border-radius: 5px 5px 0 0;
+        position: relative;
+        z-index: 2;
+        max-height: var(--tabs-height);
+        cursor: pointer;
+        flex: 1;
+
+        &:hover {
+          background-color: var(--tabs-hover-bg-color);
+        }
+
+        &::before,
+        &::after {
+          content: ' ';
+          pointer-events: none;
+          position: absolute;
+          display: block;
+          height: 80%;
+          width: 100%;
+          bottom: 0px;
+          z-index: -1;
+          opacity: 0;
+        }
+      }
+
+      >.tab-radio:checked+.tab-label {
+        z-index: 4;
+
+        &::before {
+          box-shadow: 14px 0.25em 0 -4px var(--tabs-selected-bg-color);
+        }
+
+        &::after {
+          box-shadow: -14px 0.25em 0 -4px var(--tabs-selected-bg-color);
+        }
+
+        &:hover::before,
+        &::before {
+          left: -100%;
+          border-radius: 0 0 10px 0;
+          opacity: 1;
+        }
+
+        &:hover::after,
+        &::after {
+          right: -100%;
+          border-radius: 0 0 0 10px;
+          opacity: 1;
+        }
+      }
+    }
+
+    .tab-icon:not(.tab-close) {
+      width: 20px;
+    }
+
+    .tab-close {
+      display: flex;
+      width: 15px;
+    }
+  }
+
+  @container (min-width: 400px) {
+    .tabs {}
+  }
+}

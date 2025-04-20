@@ -1,16 +1,16 @@
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   position: relative;
 }
 body,
 html {
   height: 100%;
   overflow: auto;
-}
+} */
 :root {
   /** * THEME LIGHT */
   --main-bg-color-light: rgba(255, 255, 255);
@@ -85,7 +85,7 @@ html {
 }
 .sd-tabs > .sd-tab-label::after,
 .sd-tabs > .sd-tab-label::before {
-  content: " ";
+  content: ' ';
   pointer-events: none;
   position: absolute;
   display: block;
