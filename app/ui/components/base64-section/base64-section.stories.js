@@ -1,5 +1,5 @@
-import Base64Section__Header, {
-  Base64Section,
+import Base64Section, {
+  Base64Section__Header,
 } from './base64-section.component.tsx'
 import './base64-section.component.css'
 
@@ -20,7 +20,11 @@ export const Header = {
 
 // Template cho Base64Section
 export const Basic = {
-  render: () => <Base64Section />,
+  render: () => (
+    <div style={{ backgroundColor: '#f5f5f5', padding: '20px' }}>
+      <Base64Section />
+    </div>
+  ),
   name: 'Base64Section Basic',
 }
 

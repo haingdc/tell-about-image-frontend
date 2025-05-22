@@ -17,6 +17,7 @@ interface FileList {
 }
 
 interface HTMLInputElement extends HTMLElement {
+  value: string;
   files: FileList | null;
   click(): void;
 }

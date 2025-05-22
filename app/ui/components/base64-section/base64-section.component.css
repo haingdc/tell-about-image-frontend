@@ -209,7 +209,7 @@ html {
   align-items: center;
   justify-content: center;
   border-radius: 2px;
-  width: 15px;
+  width: var(--size-px-3);
   padding: 2px 3px;
 }
 .sd-tabs > .sd-tab-label .sd-tab-icon:not(.sd-tab-close) {

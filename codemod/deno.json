@@ -1,0 +1,17 @@
+{
+  "tasks": {
+    "generate-icon-exports": {
+      "description": "Generate icon exports",
+      "command": "deno run --allow-read --allow-write generate-icon-exports.ts"
+    },
+    "copy-svg-content": {
+      "description": "Copy SVG content to the output directory",
+      "command": "deno run --allow-read --allow-write generate-icon-react-from-svg.ts"
+    },
+    "export-vue-icons": {
+      "description": "Generate icon Vue components from SVG files",
+      "command": "deno run --allow-read --allow-write generate-icon-exports.ts",
+      "dependencies": ["copy-svg-content"]
+    }
+  }
+}

@@ -1,37 +1,45 @@
 @layer components {
   .tabs {
+    --tabs-bg-color: transparent;
     --tab-bg-color: white;
     --tabs-height: var(--size-px-10);
     --tabs-selected-bg-color: white;
     --tabs-hover-bg-color: white;
     --tab-content-bg-color: white;
-    min-width: 300px;
+    width: 500px;
     min-height: 100px;
-    width: 100%;
     border: var(--border-size-1) solid var(--gray-1);
-    background-color: var(--gray-2);
+    background-color: var(--tabs-bg-color);
     display: flex;
     flex-direction: column;
     position: relative;
 
+    .tab-bar {
+      display: flex;
+      gap: var(--size-px-2);
+    }
+
     .tab-content {
       min-height: 100px;
       background-color: var(--tab-content-bg-color);
+      border-radius: var(--radius-2);
+      padding: var(--size-px-4);
     }
 
     .tab-item {
-      max-width: 150px;
+      flex: 1;
+      align-self: flex-end;
 
       &:first-of-type {
         margin-left: var(--size-px-2);
       }
 
-      >.tab-radio {
+      > .tab-radio {
         position: absolute;
         opacity: 0;
       }
 
-      >.tab-label {
+      > .tab-label {
         background-color: var(--tab-bg-color);
         display: flex;
         padding: var(--size-px-3);
@@ -61,7 +69,7 @@
         }
       }
 
-      >.tab-radio:checked+.tab-label {
+      > .tab-radio:checked + .tab-label {
         z-index: 4;
 
         &::before {
@@ -96,9 +104,11 @@
       display: flex;
       width: 15px;
     }
-  }
 
-  @container (min-width: 400px) {
-    .tabs {}
+    .wrapper-base64-text {
+      max-height: 300px;
+      overflow: auto;
+      overflow-wrap: break-word;
+    }
   }
 }
