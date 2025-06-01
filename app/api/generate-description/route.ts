@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 // This is a placeholder for the actual AI image description API
 // In a real implementation, you would use OpenAI, Google Gemini, or another AI service
 async function generateImageDescription(
-  _mageBuffer: ArrayBuffer,
+  mageBuffer: ArrayBuffer,
 ): Promise<string> {
   // Simulate AI processing time
   await new Promise((resolve) => setTimeout(resolve, 1500));
@@ -14,6 +14,9 @@ async function generateImageDescription(
   // 3. Return the description
 
   // For demo purposes, return a placeholder description
+  if (mageBuffer) {
+    return "This image appears to show a beautiful landscape with mountains in the background and a lake in the foreground. The sky has some clouds and the scene is captured during daytime with good lighting conditions.";
+  }
   return "This image appears to show a beautiful landscape with mountains in the background and a lake in the foreground. The sky has some clouds and the scene is captured during daytime with good lighting conditions.";
 }
 

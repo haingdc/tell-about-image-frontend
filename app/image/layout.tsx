@@ -1,5 +1,6 @@
 "use client";
 
+// @ts-ignore: css modules
 import styles from "./styles/image.module.css";
 import { usePathname, useRouter } from "next/navigation";
 

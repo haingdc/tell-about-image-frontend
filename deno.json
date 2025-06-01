@@ -35,7 +35,19 @@
     "exclude": ["lib.deno.d.ts"]
   },
   "fmt": {
+    "lineWidth": 100,
     "proseWrap": "always",
     "exclude": ["public/fontello-*"]
-  }
+  },
+  "exclude": [
+    "lib.deno.d.ts",
+    "trash",
+    "stories/Page.stories.ts",
+    "**/*.stories.tsx",
+    "**/*.stories.ts",
+    ".next",
+    ".storybook",
+    "codemod",
+    ".codemod"
+  ]
 }

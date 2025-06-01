@@ -1,6 +1,7 @@
 "use client";
 
 import { ChangeEvent, useRef, useState } from "react";
+// @ts-ignore: css modules
 import styles from "../styles/image.module.css";
 
 type DescribeType = "alt" | "short";
@@ -77,18 +78,14 @@ export default function DescribePage() {
         <div className={styles.buttonGroup}>
           <button
             type="button"
-            className={`${styles.modeButton} ${
-              describeType === "alt" ? styles.active : ""
-            }`}
+            className={`${styles.modeButton} ${describeType === "alt" ? styles.active : ""}`}
             onClick={() => handleTypeChange("alt")}
           >
             Alt
           </button>
           <button
             type="button"
-            className={`${styles.modeButton} ${
-              describeType === "short" ? styles.active : ""
-            }`}
+            className={`${styles.modeButton} ${describeType === "short" ? styles.active : ""}`}
             onClick={() => handleTypeChange("short")}
           >
             Short

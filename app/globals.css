@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('../public/fontello-a37998fd/css/fontello.css');
 @import url('@/app/layers-define.css');
-@import 'open-props/normalize' layer(reset);
-@import 'open-props/colors' layer(base);
-@import 'open-props/sizes' layer(base);
-@import 'open-props/borders' layer(base);
-@import 'open-props/aspects' layer(base);
-@import 'open-props/fonts' layer(base);
+@import 'open-props/normalize' /* layer(reset) */;
+@import 'open-props/colors' /* layer(base) */;
+@import 'open-props/sizes' /* layer(base) */;
+@import 'open-props/borders' /* layer(base) */;
+@import 'open-props/aspects' /* layer(base) */;
+@import 'open-props/fonts' /* layer(base) */;
+@import 'open-props/shadows' /* layer(base) */;
 
 /* reference: https://www.joshwcomeau.com/css/custom-css-reset/ */
 /* @layer reset {
@@ -71,14 +72,14 @@
 
 @layer default {
   :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --background: var(--gray-0);
+    --foreground: var(--gray-9);
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background: #0a0a0a;
-      --foreground: #ededed;
+      --background: var(--gray-8);
+      --foreground: var(--gray-1);
     }
   }
 

@@ -6,13 +6,12 @@
     --tabs-selected-bg-color: white;
     --tabs-hover-bg-color: white;
     --tab-content-bg-color: white;
-    width: 500px;
     min-height: 100px;
-    border: var(--border-size-1) solid var(--gray-1);
     background-color: var(--tabs-bg-color);
     display: flex;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
 
     .tab-bar {
       display: flex;
@@ -34,12 +33,12 @@
         margin-left: var(--size-px-2);
       }
 
-      > .tab-radio {
+      >.tab-radio {
         position: absolute;
         opacity: 0;
       }
 
-      > .tab-label {
+      >.tab-label {
         background-color: var(--tab-bg-color);
         display: flex;
         padding: var(--size-px-3);
@@ -69,7 +68,7 @@
         }
       }
 
-      > .tab-radio:checked + .tab-label {
+      >.tab-radio:checked+.tab-label {
         z-index: 4;
 
         &::before {
@@ -105,7 +104,15 @@
       width: 15px;
     }
 
+    .wrapper-base64-text-container {
+      display: flex;
+      flex-direction: column;
+      gap: var(--size-px-2);
+    }
+
     .wrapper-base64-text {
+      font-size: var(--font-size-0);
+      line-height: var(--font-lineheight-2);
       max-height: 300px;
       overflow: auto;
       overflow-wrap: break-word;

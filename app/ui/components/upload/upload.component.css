@@ -1,7 +1,6 @@
 @layer components {
   .upload-component {
     width: 100%;
-    max-width: 500px;
     border: 2px dashed #d1d5db;
     border-radius: var(--radius-3);
     display: flex;
@@ -12,9 +11,10 @@
     padding: var(--size-px-3);
     cursor: pointer;
     transition: all 0.3s ease;
+
     &:hover {
-      border-color: var(--blue-7);
-      background-color: var(--blue-0);
+      border-color: light-dark(var(--blue-7), var(--blue-6));
+      background-color: light-dark(var(--blue-0), var(--gray-7));
     }
 
     .image-wrapper {
@@ -32,7 +32,7 @@
     }
 
     .extension_item {
-      background-color: var(--gray-2);
+      background-color: light-dark(var(--gray-2), var(--gray-7));
       padding: var(--size-px-1);
       border: 1px solid var(--gray-4);
       border-radius: var(--radius-2);

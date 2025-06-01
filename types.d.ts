@@ -15,13 +15,3 @@ interface FileList {
   item(index: number): File | null;
   [index: number]: File;
 }
-
-interface HTMLInputElement extends HTMLElement {
-  value: string;
-  files: FileList | null;
-  click(): void;
-}
-
-interface DataTransfer {
-  files: FileList;
-}

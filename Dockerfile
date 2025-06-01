@@ -1,5 +1,5 @@
 # Start from the Deno official image
-FROM denoland/deno:2.2.6
+FROM denoland/deno:2.3.5
 
 # Work directory in container
 WORKDIR /app
@@ -9,7 +9,8 @@ COPY . .
 
 # Stage 1: Install dependencies
 RUN deno install
-RUN deno install --allow-scripts=npm:sharp@0.34.0,npm:sharp@0.33.5,npm:sharp@0.34.1,npm:core-js-pure@3.41.0
+# If you need to update below script, a solution is remove node_modules and run `deno install`. Then Deno will show the script that need to be updated.
+RUN deno install --allow-scripts=npm:unrs-resolver@1.7.0,npm:sharp@0.34.0,npm:sharp@0.33.5,npm:sharp@0.34.1,npm:core-js-pure@3.41.0
 
 # Stage 2: Build the application
 # Run tasks to set up the environment and application

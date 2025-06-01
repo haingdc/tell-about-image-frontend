@@ -1,11 +1,13 @@
 "use client";
 
-import Base64Section from "@/app/ui/components/base64-section/base64-section.component.tsx";
+import CountDown from "@/app/ui/components/count-down/count-down-wrapper-react.tsx";
+import DialogMaster from "@/app/ui/components/dialog-master/dialog-master-wrapper-react.tsx";
 
-export default function UploadForm() {
+export default function Example() {
   return (
     <div>
-      <Base64Section />
+      <CountDown />
+      <DialogMaster />
     </div>
   );
 }

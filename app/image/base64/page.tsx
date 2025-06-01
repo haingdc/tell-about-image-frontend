@@ -1,6 +1,7 @@
 "use client";
 
 import { ChangeEvent, useRef, useState } from "react";
+// @ts-ignore: css modules
 import styles from "../styles/image.module.css";
 import clsx from "clsx";
 

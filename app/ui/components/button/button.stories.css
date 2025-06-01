@@ -1,0 +1,31 @@
+.variant-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px 0;
+}
+
+.variant-table th,
+.variant-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.variant-table thead th {
+  font-weight: 600;
+  text-transform: capitalize;
+  background-color: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.variant-table tbody th {
+  font-weight: 500;
+  text-align: left;
+  text-transform: capitalize;
+  background-color: #f9fafb;
+}
+
+.variant-table td {
+  vertical-align: middle;
+}
