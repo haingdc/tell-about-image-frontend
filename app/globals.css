@@ -1,13 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('../public/fontello-a37998fd/css/fontello.css');
-@import url('@/app/layers-define.css');
-@import 'open-props/normalize' /* layer(reset) */;
-@import 'open-props/colors' /* layer(base) */;
-@import 'open-props/sizes' /* layer(base) */;
-@import 'open-props/borders' /* layer(base) */;
-@import 'open-props/aspects' /* layer(base) */;
-@import 'open-props/fonts' /* layer(base) */;
-@import 'open-props/shadows' /* layer(base) */;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("./layers-define.css");
+/* @import 'open-props/normalize' layer(reset); */
+/* @import 'open-props/colors' layer(base); */
+/* @import 'open-props/sizes' layer(base); */
+/* @import 'open-props/borders' layer(base); */
+/* @import 'open-props/aspects' layer(base); */
+/* @import 'open-props/fonts' layer(base); */
+/* @import 'open-props/shadows' layer(base); */
+@import "../node_modules/open-props/normalize.min.css" layer(reset);
+@import "../node_modules/open-props/colors.min.css" layer(base);
+@import "../node_modules/open-props/sizes.min.css" layer(base);
+@import "../node_modules/open-props/borders.min.css" layer(base);
+@import "../node_modules/open-props/aspects.min.css" layer(base);
+@import "../node_modules/open-props/fonts.min.css" layer(base);
+@import "../node_modules/open-props/shadows.min.css" layer(base);
 
 /* reference: https://www.joshwcomeau.com/css/custom-css-reset/ */
 /* @layer reset {
@@ -320,7 +326,7 @@
     display: flex;
     gap: 1rem;
     &:before {
-      content: '';
+      content: "";
       border: 0.5px dashed #d3d3d3;
       align-self: stretch;
     }

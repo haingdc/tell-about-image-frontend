@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import UploadComponent from "./upload.component.tsx";
-// @ts-ignore: css modules
+/* @ts-ignore: css modules */
 import styles from "./upload.component.stories.module.css";
 
 const meta: Meta<typeof UploadComponent> = {

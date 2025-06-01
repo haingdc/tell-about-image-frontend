@@ -5,7 +5,7 @@ import ImageEdit from "@/app/ui/components/image-edit/image-edit.component.tsx";
 import "./get-base64-from-image.component.css";
 import Base64Section from "@/app/ui/components/base64-section/base64-section.component.tsx";
 
-export default function GetBase64FromImage() {
+function GetBase64FromImage() {
   const ref = useRef<HTMLInputElement>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
@@ -61,3 +61,5 @@ export default function GetBase64FromImage() {
     </div>
   );
 }
+
+export default GetBase64FromImage;

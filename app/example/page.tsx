@@ -1,7 +1,6 @@
-import "./example.page.css";
 import Example from "@/app/ui/example/UploadForm.tsx";
 
-export default async function Page() {
+export default function Page() {
   return (
     <div>
       <Example />

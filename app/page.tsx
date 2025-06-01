@@ -30,9 +30,8 @@ export default function Home() {
               color: "#666",
             }}
           >
-            Upload your images and get AI-generated descriptions instantly. Our
-            advanced AI technology analyzes your images and provides detailed,
-            accurate descriptions.
+            Upload your images and get AI-generated descriptions instantly. Our advanced AI
+            technology analyzes your images and provides detailed, accurate descriptions.
           </div>
           <Link
             href="./image/base64"

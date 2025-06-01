@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:turbopack:experimental": "next build --turbopack",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006 --no-open",

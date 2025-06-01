@@ -8,5 +8,6 @@ module.exports = {
       },
     ],
     "postcss-custom-media",
+    ["postcss-import", {}],
   ],
 };

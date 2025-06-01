@@ -22,7 +22,7 @@
 }
 
 @media (max-width: 767.98px) {
-  input[type='file'] {
+  input[type="file"] {
     inline-size: 100%;
   }
 }
@@ -99,7 +99,7 @@ dialog-master {
         }
 
         @media (max-width: 410px) {
-          & button[type='reset'] {
+          & button[type="reset"] {
             display: none;
           }
         }

@@ -40,6 +40,7 @@
     "npm:react-dom@19": "19.1.0_react@19.1.0",
     "npm:react@19": "19.1.0",
     "npm:sharp@0.34": "0.34.2",
+    "npm:storybook@8.6.14": "8.6.14",
     "npm:storybook@^8.6.12": "8.6.14",
     "npm:typescript@5": "5.8.3",
     "npm:vitest@^3.1.1": "3.1.4_@types+node@22.15.29_@vitest+browser@3.1.4__vitest@3.1.4__@testing-library+dom@10.4.0__@types+node@22.15.29_vite@6.3.5__@types+node@22.15.29__picomatch@4.0.2"

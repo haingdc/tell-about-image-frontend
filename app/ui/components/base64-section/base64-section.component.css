@@ -64,7 +64,7 @@ html {
   z-index: 2;
   max-height: var(--tabs-height);
   /* transition: background-color ease .2s, box-shadow ease .2s;
-  */
+   */
   cursor: pointer;
   flex: 1;
 }
@@ -85,7 +85,7 @@ html {
 }
 .sd-tabs > .sd-tab-label::after,
 .sd-tabs > .sd-tab-label::before {
-  content: ' ';
+  content: " ";
   pointer-events: none;
   position: absolute;
   display: block;
@@ -108,7 +108,7 @@ html {
 }
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label:hover {
   /* transition: opacity ease .2s, box-shadow ease .2s;
-  */
+   */
 }
 .sd-tabs > .sd-tab-radio + .sd-tab-label:hover::before,
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label::before {
@@ -116,7 +116,7 @@ html {
   border-radius: 0 0 10px 0;
   opacity: 1;
   /* transition: opacity ease .2s, box-shadow ease .2s;
-  */
+   */
 }
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label::before {
   box-shadow: 14px 0.25em 0 -4px var(--tabs-selected-bg-color);
@@ -130,7 +130,7 @@ html {
   border-radius: 0 0 0 10px;
   opacity: 1;
   /* transition: opacity ease .2s, box-shadow ease .2s;
-  */
+   */
 }
 .sd-tabs > .sd-tab-radio:checked + .sd-tab-label::after {
   box-shadow: -14px 0.25em 0 -4px var(--tabs-selected-bg-color);
@@ -154,7 +154,7 @@ html {
   box-shadow: 14px 0.25em 0 -4px var(--tabs-hover-bg-color);
   opacity: 1;
   /* transition: all .2s;
-  */
+   */
 }
 .sd-tabs[dark] > .sd-tab-radio:not(:checked) + .sd-tab-label:hover::before {
   box-shadow: 14px 0.25em 0 -4px var(--dark-tabs-hover-bg-color);
@@ -162,7 +162,7 @@ html {
 .sd-tabs > .sd-tab-radio:not(:checked) + .sd-tab-label:hover::after {
   box-shadow: -14px 0.25em 0 -4px var(--tabs-hover-bg-color);
   /* transition: all .2s;
-  */
+   */
 }
 .sd-tabs[dark] > .sd-tab-radio:not(:checked) + .sd-tab-label:hover::after {
   box-shadow: -14px 0.25em 0 -4px var(--dark-tabs-hover-bg-color);

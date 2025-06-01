@@ -1,4 +1,4 @@
-// @ts-ignore: css modules
+/* @ts-ignore: css modules */
 import styles from "../styles/image.module.css";
 import GetBase64FromImage from "@/app/ui/image/base64-revamp/get-base64-from-image/get-base64-from-image.component.tsx";
 

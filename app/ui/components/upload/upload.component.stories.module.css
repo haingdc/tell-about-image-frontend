@@ -3,10 +3,10 @@
   width: 100%;
 }
 
-.storyContainer[data-container-size='small'] {
+.storyContainer[data-container-size="small"] {
   width: 300px;
 }
 
-.storyContainer[data-container-size='large'] {
+.storyContainer[data-container-size="large"] {
   width: 500px;
 }

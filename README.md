@@ -7,6 +7,7 @@ flyctl launch
 fly deploy
 
 [Upgrade Next.js](https://nextjs.org/docs/app/getting-started/upgrading)
+
 ```terminal
 # By npx:
 npx @next/codemod@canary upgrade latest
