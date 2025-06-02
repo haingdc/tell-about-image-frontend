@@ -10,6 +10,14 @@ function GetBase64FromImage() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [result, setResult] = useState<string>("");
+  const [readMore, setReadMore] = useState(false);
+
+  const reset = () => {
+    setResult("");
+    setSelectedFile(null);
+    setReadMore(false);
+    setPreviewUrl(null);
+  };
 
   const handleFileSelect = async (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -38,8 +46,7 @@ function GetBase64FromImage() {
   };
 
   const handleClose = () => {
-    setSelectedFile(null);
-    setPreviewUrl(null);
+    reset();
     if (ref.current) {
       ref.current.files = null;
     }
@@ -57,7 +64,9 @@ function GetBase64FromImage() {
           />
         )
         : undefined}
-      <Base64Section>{result}</Base64Section>
+      <Base64Section key={result} readMore={readMore} onReadMore={() => setReadMore(true)}>
+        {result}
+      </Base64Section>
     </div>
   );
 }

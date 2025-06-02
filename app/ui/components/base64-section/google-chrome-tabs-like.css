@@ -1,17 +1,24 @@
 @layer components {
   .tabs {
-    --tabs-bg-color: transparent;
-    --tab-bg-color: white;
+    --background: var(--gray-2);
+    --tab-bg-color: var(--background);
     --tabs-height: var(--size-px-10);
-    --tabs-selected-bg-color: white;
-    --tabs-hover-bg-color: white;
-    --tab-content-bg-color: white;
+    --tabs-selected-bg-color: var(--background);
+    --tabs-hover-bg-color: var(--background);
+    --tab-content-bg-color: var(--background);
+    @media (--OSdark) {
+      --background: var(--surface-3);
+      --tab-bg-color: var(--background);
+      --tabs-height: var(--size-px-10);
+      --tabs-selected-bg-color: var(--background);
+      --tabs-hover-bg-color: var(--background);
+      --tab-content-bg-color: var(--background);
+    }
     min-height: 100px;
-    background-color: var(--tabs-bg-color);
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
 
     .tab-bar {
       display: flex;
@@ -22,7 +29,7 @@
       min-height: 100px;
       background-color: var(--tab-content-bg-color);
       border-radius: var(--radius-2);
-      padding: var(--size-px-4);
+      padding: var(--size-px-3);
     }
 
     .tab-item {
@@ -41,7 +48,7 @@
       > .tab-label {
         background-color: var(--tab-bg-color);
         display: flex;
-        padding: var(--size-px-3);
+        padding: var(--size-px-2);
         align-items: center;
         border-radius: 5px 5px 0 0;
         position: relative;
@@ -95,19 +102,27 @@
       }
     }
 
-    .tab-icon:not(.tab-close) {
-      width: 20px;
-    }
-
     .tab-close {
       display: flex;
       width: 15px;
+    }
+
+    .toggle-button {
+      padding-bottom: var(--size-px-2);
     }
 
     .wrapper-base64-text-container {
       display: flex;
       flex-direction: column;
       gap: var(--size-px-2);
+      padding: var(--size-px-2) 0;
+      background-color: light-dark(var(--gray-1), var(--gray-8));
+      color: light-dark(var(--gray-9), var(--gray-1));
+      border-radius: var(--radius-2);
+      box-shadow: var(--shadow-1);
+      .placeholder {
+        height: 300px;
+      }
     }
 
     .wrapper-base64-text {
@@ -116,6 +131,16 @@
       max-height: 300px;
       overflow: auto;
       overflow-wrap: break-word;
+      padding: 0 var(--size-px-2);
+    }
+
+    .read-more-button {
+      margin-left: var(--size-px-1);
+      background-color: light-dark(var(--gray-3), var(--gray-4));
+      color: light-dark(var(--gray-9), var(--gray-7));
+      &:hover {
+        background-color: light-dark(var(--gray-4), var(--gray-3));
+      }
     }
   }
 }

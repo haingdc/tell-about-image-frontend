@@ -24,7 +24,7 @@
       height: 1rem;
     }
   }
-  &:focus-visible {}
+
   &[aria-invalid="true"] {
     @media (--OSdark) {}
   }
@@ -49,13 +49,13 @@
 }
 
 .secondary {
-  background-color: rgb(255 255 255);
-  color: rgb(31 41 55);
+  background-color: light-dark(hsl(0, 0%, 100%), var(--gray-7));
+  color: light-dark(hsl(215, 27.9%, 16.9%), var(--gray-0));
   border-color: rgb(156 163 175);
 }
 
 .secondary.enabled:hover {
-  background-color: rgb(243 244 246);
+  background-color: light-dark(rgb(243 244 246), var(--gray-6));
 }
 
 .small {

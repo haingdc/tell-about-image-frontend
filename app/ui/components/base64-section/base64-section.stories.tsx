@@ -1,4 +1,4 @@
-import Base64Section, { Base64Section__Header } from "./base64-section.component.tsx";
+import Base64Section from "./base64-section.component.tsx";
 import "./base64-section.component.css";
 // @ts-ignore: build not working, detect issue in the future
 import sampleText from "./sample-base64-data.txt?raw"; // Vite syntax
@@ -12,7 +12,13 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <div style={{ maxWidth: 500 }}>
+      <div
+        style={{
+          maxWidth: 500,
+          backgroundColor: "light-dark(var(--gray-0), #333b3c)",
+          padding: "20px",
+        }}
+      >
         <Story />
       </div>
     ),
@@ -22,49 +28,13 @@ const meta = {
 export default meta;
 
 export const Basic = {
-  render: () => (
-    <div style={{ backgroundColor: "#f5f5f5", padding: "20px" }}>
-      <Base64Section>
-        {sampleText}
-      </Base64Section>
-    </div>
-  ),
+  render: () => <Base64Section>{sampleText}</Base64Section>,
 };
 
-// Template cho Base64Section__Header
-export const Header = {
-  render: () => <Base64Section__Header />,
-  name: "Base64Section Header",
+export const Empty = {
+  render: () => <Base64Section></Base64Section>,
 };
 
-// Template với theme tối
-export const DarkTheme = {
-  render: () => (
-    <div style={{ backgroundColor: "#313539", padding: "20px" }}>
-      <div>
-        <Base64Section__Header />
-      </div>
-    </div>
-  ),
-  name: "Dark Theme",
-};
-
-// Template với chiều rộng cố định
-export const FixedWidth = {
-  render: () => (
-    <div style={{ width: "400px", border: "1px solid #e0e0e0" }}>
-      <Base64Section__Header />
-    </div>
-  ),
-  name: "Fixed Width 400px",
-};
-
-// Template với chiều rộng nhỏ
-export const MobileWidth = {
-  render: () => (
-    <div style={{ width: "320px", border: "1px solid #e0e0e0" }}>
-      <Base64Section__Header />
-    </div>
-  ),
-  name: "Mobile Width 320px",
+export const ReadMore = {
+  render: () => <Base64Section readMore>{sampleText}</Base64Section>,
 };
