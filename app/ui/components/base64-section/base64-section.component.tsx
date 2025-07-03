@@ -1,7 +1,6 @@
 "use client";
 
 import "./google-chrome-tabs-like.css";
-import "pedals-gears-wc";
 import { CopyDocument } from "@/app/ui/icons/index.ts";
 import { useMemo, useState } from "react";
 import LitButton from "../lit-button/lit-button-wrapper-react.tsx";

@@ -1,4 +1,10 @@
 import type { NextConfig } from "next";
+import NextBundleAnalyzer from "@next/bundle-analyzer";
+import process from "node:process";
+
+const withBundleAnalyzer = NextBundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -31,4 +37,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);
