@@ -48,6 +48,7 @@ export default function Home() {
           >
             Get Started
           </Link>
+          <Link href="./example" prefetch={false}>Example</Link>
         </div>
       </div>
     </main>

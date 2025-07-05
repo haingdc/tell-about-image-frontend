@@ -3,7 +3,7 @@
 
 import React from "react";
 import { createComponent, type EventName } from "@lit/react";
-import { LitButton as LitButtonWc } from "pedals-gears-wc";
+import LitButtonWc from "pedals-gears-wc/button";
 
 const LitButton = createComponent({
   tagName: "lit-button",

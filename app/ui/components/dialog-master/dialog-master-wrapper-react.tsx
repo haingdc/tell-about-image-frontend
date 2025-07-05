@@ -4,7 +4,7 @@
 import "./dialog-master-wrapper-react.css";
 import React, { useRef } from "react";
 import { createComponent, type EventName } from "@lit/react";
-import { DialogMaster as DialogMasterWc } from "pedals-gears-wc";
+import DialogMasterWc from "pedals-gears-wc/dialog-master";
 
 const DialogMasterWrapper = createComponent({
   tagName: "dialog-master",

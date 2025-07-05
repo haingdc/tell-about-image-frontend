@@ -32,7 +32,7 @@
     "npm:lit@^3.3.0": "3.3.0",
     "npm:next@15.3.0": "15.3.0_react@19.1.0_react-dom@19.1.0__react@19.1.0",
     "npm:open-props@^1.7.15": "1.7.15",
-    "npm:pedals-gears-wc@^0.0.33": "0.0.33_lit@3.3.0_open-props@1.7.15",
+    "npm:pedals-gears-wc@^0.0.40": "0.0.40_lit@3.3.0_open-props@1.7.15",
     "npm:playright@^0.0.22": "0.0.22",
     "npm:postcss-custom-media@^11.0.5": "11.0.6_postcss@8.5.4_@csstools+css-parser-algorithms@3.0.5__@csstools+css-tokenizer@3.0.4_@csstools+css-tokenizer@3.0.4",
     "npm:postcss-import@^16.1.0": "16.1.0_postcss@8.5.4",
@@ -6156,8 +6156,8 @@
         "sha.js"
       ]
     },
-    "pedals-gears-wc@0.0.33_lit@3.3.0_open-props@1.7.15": {
-      "integrity": "sha512-L7comvYQjN5wv1YE4aU/+E83Iqxc7DlonpxQGnT2lNZD7KmU5SEogT20mQHxpEISlP9ERJHLAUSizXUwrM3mtQ==",
+    "pedals-gears-wc@0.0.40_lit@3.3.0_open-props@1.7.15": {
+      "integrity": "sha512-d2lRyk+u9DxmemUsO3xDg11m6rdAR4PTx/dtxE/TmmBWMh3vDQeTDifiK3N2bQe6LokLRzNfwbg0xe98ABY74w==",
       "dependencies": [
         "lit",
         "open-props"
@@ -8206,7 +8206,7 @@
         "npm:lit@^3.3.0",
         "npm:next@15.3.0",
         "npm:open-props@^1.7.15",
-        "npm:pedals-gears-wc@^0.0.33",
+        "npm:pedals-gears-wc@^0.0.40",
         "npm:playright@^0.0.22",
         "npm:postcss-custom-media@^11.0.5",
         "npm:postcss-import@^16.1.0",

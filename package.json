@@ -18,7 +18,7 @@
     "clsx": "^2.1.1",
     "lit": "^3.3.0",
     "open-props": "^1.7.15",
-    "pedals-gears-wc": "^0.0.33",
+    "pedals-gears-wc": "^0.0.40",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "next": "15.3.0",
